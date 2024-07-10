@@ -2,10 +2,12 @@ import pandas as pd
 
 # Ruta del archivo TXT
 archivo_txt = 'Base_Clientes_12345.txt'
+data_BD_SQL_ASIGNACION = 'ruta.BD'
 
 try:
     # Leer el archivo TXT
     data = pd.read_csv(archivo_txt, delimiter='|')
+    data = pd.read_csv(data_BD_SQL_ASIGNACION, delimiter=',')
     
     # Guardar los datos en un archivo CSV temporal
     archivo_csv = 'clientes.csv'
